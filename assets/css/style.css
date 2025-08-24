@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/*root references to the HTML tag*/
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --primary-bg-color: #ecf0f1;
+    --secondary-bg-color: #bdc3c7;
+    --text-color: #34495e;
+    --title-color: #2c3e50;
+    --border-color: #95a5a6;
+    --link-color: #2980b9;
+    --icon-color: #e74c3c;
+    --font-family: 'Arial', sans-serif;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    vertical-align: baseline;
+    list-style: none;
+    text-decoration: none;
+}
+
+body{
+    background: var(--primary-bg-color);
+    font-family: "Inter", sans-serif;
+}
+
+i{
+    color: var(--icon-color);
+}
+
+header{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    width: 100%;
+}
+.header__brand .brand__logo{
+    width: 3.25rem;
+    height: 3.25rem;
+}
+header__brand{
+
+}
+brand__logo{
+
+}
+
+#theme-toggle{
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+    background: var(--primary-bg-color);
+}
+.menu__item{
+    width: 100%;
+}
+
+.menu--mobile{
+    width: 100vw;
+    position: fixed; /*keep the mobile menu fixed, ensuring it is always visible*/
+    bottom: 0; /*the mobile menu is always at the bottom*/
+    justify-content: space-between;
+    border-top: 1px solid var(--border-color);
+}
+.menu--mobile .menu__link{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+}
+
+.menu__icon, .menu__text{
+    color: var(--text-color);
+}
+.menu__link.active .menu__icon, 
+.menu__link.active .menu__text{
+    color: var(--primary-color);
+    font-weight: 600;
+}
+.menu__icon{
+    font-size: 1.5rem;
+}
+.menu__text{
+    font-size: 0.75rem;
+    text-transform: uppercase;
+}
+
+@media (min-width: 768px){
+    .menu--mobile{
+        display: none;
+    }
+    /*
+    .menu--mobile .menu__link{
+        flex-direction: row;
+        gap: 0.5rem;
+    }
+    .menu__text{
+        font-size: 1rem;
+    }
+    */
+}
