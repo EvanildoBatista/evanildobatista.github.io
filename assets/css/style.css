@@ -1,11 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 /*root references to the HTML tag*/
-:root {
+:root, :root[data-theme='dark'] {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --primary-bg-color: #2c3e50;
+    --secondary-bg-color: #34495e;
+    --logo-bg-color: #ecf0f1;
+    --text-color: #ecf0f1;
+    --title-color: #ecf0f1;
+    --border-color: #7f8c8d;
+    --link-color: #2980b9;
+    --icon-color: #e74c3c;
+    --font-family: 'Arial', sans-serif;
+}
+
+:root[data-theme='light'] {
     --primary-color: #3498db;
     --secondary-color: #2ecc71;
     --primary-bg-color: #ecf0f1;
     --secondary-bg-color: #bdc3c7;
+    --logo-bg-color: #ecf0f1;
     --text-color: #34495e;
     --title-color: #2c3e50;
     --border-color: #95a5a6;
@@ -24,6 +39,10 @@
     text-decoration: none;
 }
 
+html[data-theme='dark'] .brand__logo {
+    filter: invert(1);
+}
+
 body{
     background: var(--primary-bg-color);
     font-family: "Inter", sans-serif;
@@ -31,6 +50,11 @@ body{
 
 i{
     color: var(--icon-color);
+}
+
+a:hover{
+    color: var(--primary-color);
+    font-weight: 600;
 }
 
 header{
@@ -51,10 +75,12 @@ header{
     width: 3.25rem;
     height: 3.25rem;
 }
-header__brand{
-
+.header__brand{
+    /*background: var(--logo-bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 50%;*/
 }
-brand__logo{
+.brand__logo{
 
 }
 
@@ -62,6 +88,7 @@ brand__logo{
     font-size: 1.5rem;
     color: var(--primary-color);
     cursor: pointer;
+    transition: ease-in-out 0.5s;
 }
 
 .menu{
