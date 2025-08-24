@@ -41,6 +41,12 @@ header{
     padding: 1rem 2rem;
     width: 100%;
 }
+
+.header__toggle{
+    display: flex;
+    justify-content: flex-end;
+}
+
 .header__brand .brand__logo{
     width: 3.25rem;
     height: 3.25rem;
@@ -74,6 +80,18 @@ brand__logo{
     justify-content: space-between;
     border-top: 1px solid var(--border-color);
 }
+
+.nav--desktop{
+    display: none;
+}
+
+.menu--desktop{
+    gap: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+}
+
 .menu--mobile .menu__link{
     display: flex;
     flex-direction: column;
@@ -86,7 +104,9 @@ brand__logo{
     color: var(--text-color);
 }
 .menu__link.active .menu__icon, 
-.menu__link.active .menu__text{
+.menu__link.active .menu__text,
+.menu__link:hover .menu__icon, 
+.menu__link:hover .menu__text{
     color: var(--primary-color);
     font-weight: 600;
 }
@@ -99,8 +119,20 @@ brand__logo{
 }
 
 @media (min-width: 768px){
-    .menu--mobile{
+    header{
+        border-bottom: 1px solid var(--border-color);
+        position: fixed;
+        padding: 1rem 6rem;
+        background: var(--primary-bg-color);
+    }
+    .nav--mobile{
         display: none;
+    }
+    .nav--desktop{
+        display: flex;
+    }
+    .nav--desktop, .header__toggle{
+        min-width: 30%;
     }
     /*
     .menu--mobile .menu__link{
@@ -111,4 +143,10 @@ brand__logo{
         font-size: 1rem;
     }
     */
+}
+
+@media (min-width: 1400px){
+    header{
+        padding: 1rem 15rem;
+    }
 }
