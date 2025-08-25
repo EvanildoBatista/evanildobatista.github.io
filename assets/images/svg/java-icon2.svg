@@ -1,0 +1,10 @@
+<svg width="40" height="40" viewBox="0 0 611 480" xmlns="http://www.w3.org/2000/svg">
+  <title>Duke – mascote do Java</title>
+  <g transform="scale(0.0656)">
+    <path d="M306 0 L490 320 L306 240 L122 320 Z" fill="white"/>
+    <circle cx="306" cy="240" r="70" fill="#d32f2f"/>
+    <path d="M240 360 L240 420 L372 420 L372 360 Z" fill="black"/>
+    <path d="M220 360 C200 400, 200 440, 240 420" fill="black"/>
+    <path d="M392 360 C412 400, 412 440, 372 420" fill="black"/>
+  </g>
+</svg>

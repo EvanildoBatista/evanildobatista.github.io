@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+--primary-border-color@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
 
 /*root references to the HTML tag*/
 :root, :root[data-theme='dark'] {
@@ -9,10 +10,12 @@
     --logo-bg-color: #ecf0f1;
     --text-color: #ecf0f1;
     --title-color: #ecf0f1;
-    --border-color: #7f8c8d;
-    --link-color: #2980b9;
+    --primary-border-color: hsl(184, 6%, 53%);
+    --secondary-border-color: #e74c3c;
+    --link-color: #79d0f9;
     --icon-color: #e74c3c;
     --font-family: 'Arial', sans-serif;
+    --font-family-title: 'League Spartan','Arial', sans-serif;
 }
 
 :root[data-theme='light'] {
@@ -23,10 +26,12 @@
     --logo-bg-color: #ecf0f1;
     --text-color: #34495e;
     --title-color: #2c3e50;
-    --border-color: #95a5a6;
+    --primary-border-color: #95a5a6;
+    --secondary-border-color: #e74c3c;
     --link-color: #2980b9;
     --icon-color: #e74c3c;
     --font-family: 'Arial', sans-serif;
+    --font-family-title: 'League Spartan','Arial', sans-serif;
 }
 
 
@@ -52,9 +57,33 @@ i{
     color: var(--icon-color);
 }
 
+b{
+    font-weight: 400;
+}
+
+h1{
+    font-size: 2.5rem;
+    font-weight: 200;
+}
+
+h1, h2, h3{
+    font-family: var(--font-family-title);
+    text-transform: uppercase;
+    color: var(--title-color);
+    font-weight: 200;
+}
+
+p{
+    font-size: 1.25rem;
+    text-align: justify;
+}
+
 a:hover{
     color: var(--primary-color);
     font-weight: 600;
+}
+a:visited{
+    color: var(--link-color);
 }
 
 header{
@@ -75,15 +104,16 @@ header{
     width: 3.25rem;
     height: 3.25rem;
 }
+ /*
 .header__brand{
-    /*background: var(--logo-bg-color);
-    border: 1px solid var(--border-color);
-    border-radius: 50%;*/
+   background: var(--logo-bg-color);
+    border: 1px solid var(--primary-border-color);
+    border-radius: 50%;
 }
 .brand__logo{
 
 }
-
+*/
 #theme-toggle{
     font-size: 1.5rem;
     color: var(--primary-color);
@@ -105,7 +135,7 @@ header{
     position: fixed; /*keep the mobile menu fixed, ensuring it is always visible*/
     bottom: 0; /*the mobile menu is always at the bottom*/
     justify-content: space-between;
-    border-top: 1px solid var(--border-color);
+    border-top: 1px solid var(--primary-border-color);
 }
 
 .nav--desktop{
@@ -144,11 +174,103 @@ header{
     font-size: 0.75rem;
     text-transform: uppercase;
 }
+.menu--social{
+    gap: 1rem;
+}
+
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.625rem;
+    width: 100%;
+    background: transparent;
+    border-radius: 3.125rem;
+    padding: 0.875rem 1.5rem;
+    transition: ease-in-out 0.3s;
+    cursor: pointer;
+}
+.btn:hover{
+    transform: scale(1.05);
+    transition: ease-in-out 0.3s;
+}
+.btn span, .btn i{
+    font-size: 1.25rem;
+    text-transform: uppercase;
+}
+.btn--primary{
+    border: 1px solid var(--primary-color);
+}
+.btn--primary span{
+    color: var(--primary-color);
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2.5rem 1rem;
+}
+.main__content1{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.main__content2 iframe{
+    width: 100%;
+    aspect-ratio: 16/9;
+    border: none;
+}
+
+.skills-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 6.25rem 1rem 2rem 1rem;
+    background: var(--secondary-bg-color);
+    margin-top: -5.5rem;
+}
+.skills-section h2{
+    text-transform: none;
+    font-size: 2rem;
+}
+.skills__list{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+.skills__item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4.8rem;
+    height: 4.8rem;
+    aspect-ratio: 1/1;
+    border: 1px solid var(--secondary-border-color);
+    border-radius: 50rem;
+}
+.skills__icon{
+    width: 100%;
+    height: 100%;
+}
+
+footer{
+    margin: 5rem;
+}
+footer p{
+    font-size: .875rem;
+    text-align: center;
+    padding: 1rem;
+    margin-bottom: 5rem;
+}
 
 @media (min-width: 768px){
     header{
-        border-bottom: 1px solid var(--border-color);
-        position: fixed;
+        border-bottom: 1px solid var(--primary-border-color);
+        /*position: fixed;*/
         padding: 1rem 6rem;
         background: var(--primary-bg-color);
     }
@@ -161,6 +283,30 @@ header{
     .nav--desktop, .header__toggle{
         min-width: 30%;
     }
+
+    h1{
+        font-size: 4rem;
+    }
+    main{
+        padding: 8rem 6rem 4rem 6rem;
+    }
+    .main__content1{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .skills-section{
+        padding: 6.25rem 6rem 2rem 6rem;
+        margin-top: -6rem;
+    }
+    footer{
+        margin: 0;
+    }
+    /*
+    main{
+        padding: 12.5rem 1rem;
+    }
+    */
     /*
     .menu--mobile .menu__link{
         flex-direction: row;
@@ -172,8 +318,52 @@ header{
     */
 }
 
-@media (min-width: 1400px){
+@media (min-width: 1200px){
+    main{
+        padding: 12rem 6rem 2rem;
+    }
+    .main__content1 .btn{
+        width: auto;
+    }
     header{
         padding: 1rem 15rem;
+    }
+    .skills-section{
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10rem 6rem 4rem;
+        margin-top: -6rem;
+    }
+    .skills-section h2{
+        font-size: 3.5rem;
+        width: 60%;
+    }
+    .skills__list{
+        gap: 1rem;
+    }
+    .skills__item{
+        width: 6rem;
+        height: 6rem;
+    }
+    .skills__icon{
+        height: 3rem;
+    }
+}
+
+@media (min-width: 1400px){
+    main{
+        padding: 12rem 15rem 2rem;
+    }
+    h1{
+        font-size: 6.25rem;
+    }
+    p{
+        font-size: 1.5rem;
+    }
+   header{
+        padding: 1rem 15rem;
+    }
+    .skills-section{
+        padding: 10rem 15rem 4rem;
     }
 }
