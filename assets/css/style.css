@@ -1,4 +1,4 @@
---primary-border-color@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
 
 /*root references to the HTML tag*/
@@ -48,6 +48,10 @@ html[data-theme='dark'] .brand__logo {
     filter: invert(1);
 }
 
+html[data-theme='dark'] .skills__icon {
+    filter: invert(80%);
+}
+
 body{
     background: var(--primary-bg-color);
     font-family: "Inter", sans-serif;
@@ -66,6 +70,12 @@ h1{
     font-weight: 200;
 }
 
+h2{
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
 h1, h2, h3{
     font-family: var(--font-family-title);
     text-transform: uppercase;
@@ -82,6 +92,7 @@ a:hover{
     color: var(--primary-color);
     font-weight: 600;
 }
+
 a:visited{
     color: var(--link-color);
 }
@@ -104,16 +115,7 @@ header{
     width: 3.25rem;
     height: 3.25rem;
 }
- /*
-.header__brand{
-   background: var(--logo-bg-color);
-    border: 1px solid var(--primary-border-color);
-    border-radius: 50%;
-}
-.brand__logo{
-
-}
-*/
+ 
 #theme-toggle{
     font-size: 1.5rem;
     color: var(--primary-color);
@@ -126,6 +128,7 @@ header{
     align-items: center;
     background: var(--primary-bg-color);
 }
+
 .menu__item{
     width: 100%;
 }
@@ -160,6 +163,7 @@ header{
 .menu__icon, .menu__text{
     color: var(--text-color);
 }
+
 .menu__link.active .menu__icon, 
 .menu__link.active .menu__text,
 .menu__link:hover .menu__icon, 
@@ -167,13 +171,16 @@ header{
     color: var(--primary-color);
     font-weight: 600;
 }
+
 .menu__icon{
     font-size: 1.5rem;
 }
+
 .menu__text{
     font-size: 0.75rem;
     text-transform: uppercase;
 }
+
 .menu--social{
     gap: 1rem;
 }
@@ -186,21 +193,27 @@ header{
     width: 100%;
     background: transparent;
     border-radius: 3.125rem;
+    border: none;
     padding: 0.875rem 1.5rem;
     transition: ease-in-out 0.3s;
     cursor: pointer;
+    color: var(--primary-color);
 }
+
 .btn:hover{
     transform: scale(1.05);
     transition: ease-in-out 0.3s;
 }
+
 .btn span, .btn i{
     font-size: 1.25rem;
     text-transform: uppercase;
 }
+
 .btn--primary{
     border: 1px solid var(--primary-color);
 }
+
 .btn--primary span{
     color: var(--primary-color);
 }
@@ -209,13 +222,17 @@ main{
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    padding: 2.5rem 1rem;
 }
+
+main{ padding: 2rem 1rem; }
+.projects-section{ padding: 9.5rem 1rem; }
+
 .main__content1{
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
 }
+
 .main__content2 iframe{
     width: 100%;
     aspect-ratio: 16/9;
@@ -232,16 +249,19 @@ main{
     background: var(--secondary-bg-color);
     margin-top: -5.5rem;
 }
+
 .skills-section h2{
     text-transform: none;
     font-size: 2rem;
 }
+
 .skills__list{
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    /*justify-content: space-between;*/
     gap: 0.5rem;
 }
+
 .skills__item{
     display: flex;
     justify-content: center;
@@ -252,14 +272,57 @@ main{
     border: 1px solid var(--secondary-border-color);
     border-radius: 50rem;
 }
+
 .skills__icon{
     width: 100%;
     height: 100%;
 }
 
+.projects-section{
+    display: flex;
+    flex-direction: column;
+    margin-top: -6rem;
+}
+
+.projects__card{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.projects__card__cover{
+    width: 100%;
+    border-radius: 0.5rem;
+    object-fit: cover;
+    object-position: center;
+}
+
+.projects__card__body{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.projects__card__title{
+    font-size: 1.5rem;
+}
+
+.projects__card__description{
+    font-size: 1rem;
+    color: var(--title-color);
+}
+
+.projects__card__buttons{
+    display: flex;
+    gap: 1rem;
+}
+
 footer{
     margin: 5rem;
 }
+
 footer p{
     font-size: .875rem;
     text-align: center;
@@ -287,7 +350,12 @@ footer p{
     h1{
         font-size: 4rem;
     }
-    main{
+    h2{
+        font-size: 3rem;
+        letter-spacing: 0.4rem;
+    }
+
+    main, .projects-section{
         padding: 8rem 6rem 4rem 6rem;
     }
     .main__content1{
@@ -296,58 +364,104 @@ footer p{
         align-items: flex-start;
     }
     .skills-section{
-        padding: 6.25rem 6rem 2rem 6rem;
+        padding: 6.25rem 6rem 2rem;
         margin-top: -6rem;
+    }
+    .projects__card{
+        flex-direction: row;
+    }
+    .projects__card__body{
+        flex-direction: column;
     }
     footer{
         margin: 0;
     }
-    /*
-    main{
-        padding: 12.5rem 1rem;
-    }
-    */
-    /*
-    .menu--mobile .menu__link{
+}
+
+@media (min-width: 992px){
+    .projects__card{
         flex-direction: row;
-        gap: 0.5rem;
     }
-    .menu__text{
-        font-size: 1rem;
+    .projects__card.card--reverse{
+        flex-direction: row-reverse;
+        justify-content: space-between;
     }
-    */
+    .projects__card__cover {
+        width: 55%;
+    }
 }
 
 @media (min-width: 1200px){
+    h2{
+        font-size: 4rem;
+    }
+
     main{
         padding: 12rem 6rem 2rem;
     }
+
     .main__content1 .btn{
         width: auto;
     }
+
     header{
         padding: 1rem 15rem;
     }
+
     .skills-section{
         flex-direction: row;
         justify-content: space-between;
         padding: 10rem 6rem 4rem;
         margin-top: -6rem;
     }
+
     .skills-section h2{
         font-size: 3.5rem;
         width: 60%;
     }
+
     .skills__list{
         gap: 1rem;
     }
+
     .skills__item{
         width: 6rem;
         height: 6rem;
     }
+
     .skills__icon{
         height: 3rem;
     }
+
+    .projects__card__body{
+        flex-direction: row;
+    }
+
+    .projects__card__cover{
+        width: 50%;
+    }
+
+    .projects__card__title{
+        font-size: 3.25rem;
+    }
+
+    .projects__card__description, .projects__card__iprojects__card__list__item{
+        font-size: 1.25rem;
+    }
+
+    .projects__card__buttons .btn{
+        width: auto;
+    }
+
+    .projects__card__body .skills__item{
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .projects__card__body .skills__icon{
+        height: 2rem;
+    }
+
 }
 
 @media (min-width: 1400px){
@@ -357,6 +471,10 @@ footer p{
     h1{
         font-size: 6.25rem;
     }
+    h2{
+        font-size: 5rem;
+    }
+
     p{
         font-size: 1.5rem;
     }
