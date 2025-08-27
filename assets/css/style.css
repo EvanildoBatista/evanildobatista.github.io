@@ -225,7 +225,7 @@ main{
 }
 
 main{ padding: 2rem 1rem; }
-.projects-section{ padding: 9.5rem 1rem; }
+.projects-section{ padding: 3.5rem 1rem; }
 
 .main__content1{
     display: flex;
@@ -291,7 +291,7 @@ main{ padding: 2rem 1rem; }
     padding-bottom: 5rem;
 }
 
-.projects__card__cover{
+.projects__card__cover, .about__cover{
     width: 100%;
     border-radius: 0.5rem;
     object-fit: cover;
@@ -321,11 +321,14 @@ main{ padding: 2rem 1rem; }
 }
 
 .about__content2 .about__col1 .about__row1,
-.about__content2 .about__col1 .about__row2
+.about__content2 .about__col1 .about__row2,
+.about__content2 .about__col2
 {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 5rem;
+    margin: 1.5rem 2rem 1.5rem;
+    gap: 1rem;
 }
 
 .accordion{
@@ -383,6 +386,26 @@ main{ padding: 2rem 1rem; }
 .accordion__item.active .bi-caret-down-fill{
     transform: rotate(180deg);
 }
+.about__content1, .about__content2{
+    display: flex;
+    flex-direction: column;
+}
+.about__description{
+    margin-top: 3rem;
+    align-content: center;
+}
+.about__description p, .about__icons{
+    margin: 0 2rem 0;
+}
+.about__description__buttons{
+    display: flex;
+    flex-direction: column;
+}
+
+.about__description__buttons button{
+    margin: 2rem;
+}
+
 
 footer{
     margin-bottom: 5rem;
@@ -438,6 +461,14 @@ footer p{
     .projects__card__body{
         flex-direction: column;
     }
+    .about__content1{
+        flex-direction: row;
+    }
+    .about__col1{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }
     footer{
         margin: 0;
     }
@@ -455,7 +486,7 @@ footer p{
         flex-direction: row-reverse;
         justify-content: space-between;
     }
-    .projects__card__cover {
+    .projects__card__cover, .about__cover {
         width: 55%;
     }
     .about-section{
@@ -522,7 +553,7 @@ footer p{
         flex-direction: row;
     }
 
-    .projects__card__cover{
+    .projects__card__cover, .about__cover{
         width: 50%;
     }
 
@@ -545,6 +576,9 @@ footer p{
 
     .projects__card__body .skills__icon{
         height: 2rem;
+    }
+    .about__content2{
+        flex-direction: row;
     }
 
 }
