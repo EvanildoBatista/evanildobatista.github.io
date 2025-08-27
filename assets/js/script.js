@@ -9,3 +9,13 @@ const toggleTheme = () => {
 };
 
 themeToggle.addEventListener("click", toggleTheme);
+
+const accordions = document.querySelectorAll(".accordion__item");
+
+accordions.forEach(accordion => {
+    const header = accordion.querySelector(".accordion__header");
+    header.addEventListener("click", () => {
+        accordion.classList.toggle("active");
+    });
+});
+
