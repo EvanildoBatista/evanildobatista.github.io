@@ -1,0 +1,12 @@
+<svg width="40" height="40" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <title>Spring Framework Logo Icon</title>
+  <!-- Fundo transparente -->
+  <circle cx="32" cy="32" r="30" fill="#6db33f"/>
+  <path
+    d="M20,40 C20,28 32,28 32,28 C32,28 44,28 44,16"
+    stroke="white"
+    stroke-width="4"
+    fill="none"
+    stroke-linecap="round"
+  />
+</svg>

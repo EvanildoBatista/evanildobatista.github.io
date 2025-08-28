@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio de Evanildo">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <title>Evanildo's Portfolio</title>
+</head>
+<body>
+    <header>
+        <nav class="nav--desktop">
+            <ul class="menu menu--desktop">
+                <li class="menu__item menu__item--active">
+                    <a class="menu__link active" href="#home">
+                        <span class="menu__text">Home</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="#projects">
+                        <span class="menu__text">Projects</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="#about">
+                        <span class="menu__text">About</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="#contact">
+                        <span class="menu__text">Contact</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="header__brand">
+            <img class="brand__logo" src="/assets/images/logo.png" alt="Logo">
+        </div>
+        <div class="header__toggle">
+            <i id="theme-toggle" class="bi bi-brightness-high"></i>
+        </div>
+    </header>
+    <nav class="nav--mobile">
+        <ul class="menu menu--mobile">
+            <li class="menu__item menu__item--active">
+                <a class="menu__link active" href="#home">
+                    <i class="menu__icon bi bi-house-fill"></i>
+                    <span class="menu__text">Home</span>
+                </a>
+            </li>
+            <li class="menu__item">
+                <a class="menu__link" href="#projects">
+                    <i class="menu__icon bi bi-window-stack"></i>
+                    <span class="menu__text">Projects</span>
+                </a>
+            </li>
+            <li class="menu__item">
+                <a class="menu__link" href="#about">
+                    <i class="menu__icon bi bi-person-circle"></i>
+                    <span class="menu__text">About</span>
+                </a>
+            </li>
+            <li class="menu__item">
+                <a class="menu__link" href="#contact">
+                    <i class="menu__icon bi bi-envelope-check-fill"></i>
+                    <span class="menu__text">Contact</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <div id="home" class="main__content1">
+            <h1><b>Creative solutions and</b> front-end development</h1>
+            <p>Welcome to my portfolio! Here you will find a showcase of my work and projects.</p>
+            <ul class="menu menu--social">
+                <li>
+                    <a class="menu__link" href="">
+                        <i class="menu__icon bi bi-github"></i>
+                    </a>
+                </li>
+                <li>
+                    <a class="menu__link" href="">
+                        <i class="menu__icon bi bi-linkedin"></i>
+                    </a>
+                </li>
+                <li>
+                    <a class="menu__link" href="">
+                        <i class="menu__icon bi bi-instagram"></i>
+                    </a>
+                </li>
+            </ul>
+            <!--<a href="https://github.com/EvanildoBatista">-->
+                <button class="btn btn--primary" onclick="location.href='#projects'">
+                    <span>
+                        See projects
+                    </span>
+                    <i class="menu__icon bi bi-arrow-down-circle"></i>
+                </button>
+            <!--</a>-->
+        </div>
+        <div class="main__content2">
+            <iframe src="https://www.youtube.com/embed/HXKz2-Sohfo?si=RU4EzVa1yIKsJMWu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </main>
+    <section class="skills-section">
+        <h2>
+            Acknowledgment of the main market technologies
+        </h2>
+        <ul class="skills__list">
+            <li class="skills__item">
+                <img class="skills__icon" src="assets/images/tech/java-icon.png" alt="Java">
+            </li>
+            <li class="skills__item">
+                <img class="skills__icon" src="assets/images/tech/spring-icon.png" alt="Spring">
+            </li>
+            <li class="skills__item">
+                <img class="skills__icon" src="assets/images/tech/quarkus-icon.png" alt="Quarkus">
+            </li>
+            <li class="skills__item">
+                <img class="skills__icon" src="assets/images/tech/android-icon.png" alt="Android">
+            </li>
+        </ul>
+    </section>
+    <section id="projects" class="projects-section">
+        <h2>Projects</h2>
+        <div class="projects__container">
+
+            <div class="projects__card">
+                <img class="projects__card__cover" src="assets/images/project/projects-ti.jpg" alt="TI Projects">
+                <div class="projects__card__body">
+                    <h3 class="projects__card__title">TI Projects</h3>
+                    <p class="projects__card__description">Find out more about my TI projects.</p>
+                    <ul class="projects__card__list">
+                        <li class="projects__card__list__item">Best solutions</li>
+                        <li class="projects__card__list__item">Great ideas</li>
+                        <li class="projects__card__list__item">Innovative approaches</li>
+                    </ul>
+                    <ul class="skills__list">
+                        <li class="skills__item">
+                            <img class="skills__icon" src="assets/images/tech/java-icon.png" alt="Java">
+                        </li>
+                        <li class="skills__item">
+                            <img class="skills__icon" src="assets/images/tech/r/spring-icon.png" alt="Spring">
+                        </li>
+                        <li class="skills__item">
+                            <img class="skills__icon" src="assets/images/tech/r/quarkus-icon.png" alt="Quarkus">
+                        </li>
+                        <li class="skills__item">
+                            <img class="skills__icon" src="assets/images/tech/r/android-icon.png" alt="Android">
+                        </li>
+                    </ul>
+                    <div class="projects__card__buttons">
+                        <button class="btn btn--primary" onclick="location.href='#projects'">
+                            <span>
+                                Preview
+                                <i class="menu__icon bi bi-arrow-up-right"></i>
+                            </span>
+                        </button>
+                        <button class="btn btn--primary" onclick="location.href='#projects'">
+                            <span>
+                                Repository
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="projects__card card--reverse">
+                <img class="projects__card__cover" src="assets/images/project/projects-learn.png" alt="Projects Learning">
+                <div class="projects__card__body">
+                    <h3 class="projects__card__title">Projects Learning</h3>
+                    <p class="projects__card__description">Learning new technologies and frameworks.</p>
+                    <ul class="projects__card__list">
+                        <li class="projects__card__list__item">System analysis</li>
+                        <li class="projects__card__list__item">Web development</li>
+                        <li class="projects__card__list__item">Mobile applications</li>
+                    </ul>
+                    <ul class="skills__list">
+                        <li class="skills__item">
+                            <img class="skills__icon" src="assets/images/tech/java-icon.png" alt="Java">
+                        </li>
+                        <li class="skills__item">
+                            <img class="skills__icon" src="assets/images/tech/r/spring-icon.png" alt="Spring">
+                        </li>
+                        <li class="skills__item">
+                            <img class="skills__icon" src="assets/images/tech/r/quarkus-icon.png" alt="Quarkus">
+                        </li>
+                        <li class="skills__item">
+                            <img class="skills__icon" src="assets/images/tech/r/android-icon.png" alt="Android">
+                        </li>
+                    </ul>
+                    <div class="projects__card__buttons">
+                        <button class="btn btn--primary" onclick="location.href='#projects'">
+                            <span>
+                                Preview
+                                <i class="menu__icon bi bi-arrow-up-right"></i>
+                            </span>
+                        </button>
+                        <button class="btn btn--primary" onclick="location.href='#projects'">
+                            <span>
+                                Repository
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="projects__card">
+                <img class="projects__card__cover" src="assets/images/project/projects-management.jpg" alt="Projects Management">
+                <div class="projects__card__body">
+                    <h3 class="projects__card__title">Projects Management</h3>
+                    <p class="projects__card__description">How to manage projects effectively.</p>
+                    <ul class="projects__card__list">
+                        <li class="projects__card__list__item">Project planning</li>
+                        <li class="projects__card__list__item">Resource allocation</li>
+                        <li class="projects__card__list__item">Risk management</li>
+                    </ul>
+                    <ul class="skills__list">
+                        <li class="skills__item">
+                            <img class="skills__icon" src="assets/images/tech/java-icon.png" alt="Java">
+                        </li>
+                        <li class="skills__item">
+                            <img class="skills__icon" src="assets/images/tech/r/spring-icon.png" alt="Spring">
+                        </li>
+                        <li class="skills__item">
+                            <img class="skills__icon" src="assets/images/tech/r/quarkus-icon.png" alt="Quarkus">
+                        </li>
+                        <li class="skills__item">
+                            <img class="skills__icon" src="assets/images/tech/r/android-icon.png" alt="Android">
+                        </li>
+                    </ul>
+                    <div class="projects__card__buttons">
+                        <button class="btn btn--primary" onclick="location.href='#projects'">
+                            <span>
+                                Preview
+                                <i class="menu__icon bi bi-arrow-up-right"></i>
+                            </span>
+                        </button>
+                        <button class="btn btn--primary" onclick="location.href='#projects'">
+                            <span>
+                                Repository
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!--<a href="https://github.com/EvanildoBatista">-->
+                <button class="btn btn--primary" onclick="location.href='https://github.com/EvanildoBatista'">
+                    <span>
+                        See all projects
+                    </span>
+                    <i class="menu__icon bi bi-arrow-up-right-circle"></i>
+                </button>
+            <!--</a>-->
+
+        </div>
+    </section>
+    <section id="about" class="about-section">
+        <div class="about__content1">
+            <img class="about__cover" src="assets/images/user-icon.png" alt="About Me">
+            <div class="about__description">
+                <h2>About Me</h2>
+                <p>I'm a passionate software developer with experience in building web applications.</p>
+                <div class="about__icons">
+                    <i class="bi bi-translate"></i>
+                    <span>Intermediate English</span>
+                </div>
+                <div class="about__icons">
+                    <i class="bi bi-translate"></i>
+                    <span>Basic Spanish</span>
+                </div>
+                <div class="about__description__buttons">
+                    <button class="btn btn--primary" onclick="location.href='#'">
+                        <span>
+                            Connect with me
+                        </span>
+                        <i class="bi bi-arrow-up-right"></i>
+                    </button>
+                    <button class="btn btn--primary" onclick="location.href='#'">
+                        <span>
+                            Download CV
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="about__content2">
+            <div class="about__col1">
+                <div class="about__row1">
+                    <h3>Education</h3>
+                    <p>Bachelor's Degree in Computer Science</p>
+                    <span>March 2020</span>
+                    <div class="about__icons">
+                        <i class="bi bi-award"></i>
+                        <span>Graduated with Honors</span>
+                    </div>
+                    <div class="about__icons">
+                        <i class="bi bi-mortarboard"></i>
+                        <span>Postgraduate Degree in Software Engineering</span>
+                    </div>
+                </div>
+                <div class="about__row2">
+                    <h3>Experience</h3>
+                    <p>Software Developer at XYZ Company</p>
+                    <span>June 2020 - Present</span>
+                    <div class="about__icons">
+                        <i class="bi bi-briefcase"></i>
+                        <span>Developing web applications</span>
+                    </div>
+                    <div class="about__icons">
+                        <i class="bi bi-briefcase"></i>
+                        <span>Collaborating with cross-functional teams</span>
+                    </div>
+                    <div class="about__icons">
+                        <i class="bi bi-briefcase"></i>
+                        <span>Implementing responsive design</span>
+                    </div>
+                    <div class="about__icons">
+                        <i class="bi bi-briefcase"></i>
+                        <span>Maintaining code quality</span>
+                    </div>
+                    <!--
+                    <ul class="about__list">
+                        <li class="about__item">Favorites</li>
+                        <li class="about__item">Shopping Cart</li>
+                        <li class="about__item">Price and Category filters</li>
+                    </ul>
+                    -->
+                </div>
+            </div>
+            <div class="about__col2">
+                <h3>Courses</h3>
+                <div class="accordion">
+                    <div class="accordion__item">
+                        <button class="accordion__header start">
+                            <span>Git and github code versioning</span>
+                            <i class="bi bi-caret-down-fill"></i>
+                        </button>
+                        <div class="accordion__body">
+                            <p>Digital Training Courses</p>
+                        </div>
+                    </div>
+                    <div class="accordion__item">
+                        <button class="accordion__header">
+                            <span>Java Programming</span>
+                            <i class="bi bi-caret-down-fill"></i>
+                        </button>
+                        <div class="accordion__body">
+                            <p>Sun Microsystems Authorized Training Partner</p>
+                        </div>
+                    </div>
+                    <div class="accordion__item">
+                        <button class="accordion__header end">
+                            <span>Spring Framework</span>
+                            <i class="bi bi-caret-down-fill"></i>
+                        </button>
+                        <div class="accordion__body end">
+                            <p>Royal Cyber</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+    <section id="contact" class="contact-section">
+        <h2>Contact Me</h2>
+        <p>
+            If you have any questions or inquiries, feel free to reach out!
+            I am available for freelance work and collaboration.
+        </p>
+        <ul class="menu menu--social">
+            <li>
+                <a class="menu__link" href="https://github.com/EvanildoBatista">
+                    <i class="menu__icon bi bi-github"></i>
+                    <span>GitHub</span>
+                </a>
+            </li>
+            <li>
+                <a class="menu__link" href="https://www.linkedin.com/">
+                    <i class="menu__icon bi bi-linkedin"></i>
+                    <span>LinkedIn</span>
+                </a>
+            </li>
+            <li>
+                <a class="menu__link" href="https://www.instagram.com/">
+                    <i class="menu__icon bi bi-instagram"></i>
+                    <span>Instagram</span>
+                </a>
+            </li>
+        </ul>
+    </section>
+    <footer>
+        <p>
+            copyright © 2025 Evanildo Batista. All rights reserved. Github <a href="https://github.com/EvanildoBatista/evanildobatista.github.io">Portfolio</a>
+        </p>
+    </footer>
+    <script src="/assets/js/script.js"></script>
+</body>
+</html>
